@@ -1,0 +1,23 @@
+{
+  "name": "jenkins-cicd-pipeline-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamtheShadow712/jenkins-cicd-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamtheShadow712/jenkins-cicd-demo/issues"
+  },
+  "homepage": "https://github.com/iamtheShadow712/jenkins-cicd-demo#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
