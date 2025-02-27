@@ -16,10 +16,12 @@ app.use('/api/users', (req, res, next) => {
 
 app.use('/', (req, res, next) => {
     res.status(200).json({
-        message: "Welcome to the homepage"
+        message: "API is working"
     })
 })
 
 app.listen(PORT, () => {
     console.log('server is running on port: ', PORT)
 })
+
+module.exports = app
