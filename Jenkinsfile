@@ -25,9 +25,18 @@ pipeline{
             }
         }
         
-        stage("Push"){
+        stage("Push to DockerHub"){
             steps{
-                echo "Pushing to dockerHub"
+                withCredentials(
+                    [usernamePassword(
+                        credentialsId: "DockerHubCredential", 
+                        passwordVariable: "dokcerHubPass", 
+                        usernameVariable: "dockerHubUsername"
+                    )]){
+                    sh "docker login -u ${env.dockerHubUsername} -p ${env.dokcerHubPass}"
+                    sh "docker image tag node-api:latest venom712/node-api:latest"
+                    sh "docker push ${env.dockerHubUsername}/node-api:latest"
+                }
             }
         }
         
